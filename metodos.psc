@@ -34,7 +34,7 @@ FinFuncion
 //La: largo array orden
 //Lc: largo de array de clientes
 //metodo que despliega la información de todas las ventas hasta el momento
-Funcion display(array,cliente,Lc)
+Funcion display(array,cliente,La,Lc)
 	Definir i,t,tiempok,tmax como entero;
 	Definir estado Como Caracter;
 	i=0;
@@ -66,6 +66,7 @@ Funcion display(array,cliente,Lc)
 		Hasta Que i=Lc
 		t=t+1;
 	Hasta Que t=tmax 
+	
 FinFuncion
 
 

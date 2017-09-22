@@ -1,7 +1,10 @@
 Proceso metodos
 	
 FinProceso
-
+//array: arreglo de orden
+//L: largo del array
+//k: numero de cliente
+//retorna string con informacion de ingredientes
 Funcion string<-arrayToString(array,L,k)
 	Definir i como entero;
 	Definir string como caracter;
@@ -13,10 +16,12 @@ Funcion string<-arrayToString(array,L,k)
 				string=string+","+array[i,0,k];
 			FinSi
 		FinSi
-	FinPara
-	
+	FinPara	
 FinFuncion
-
+//array: arreglo de orden
+//L: largo del array
+//k: numero de cliente
+//retorna tiempo para una orden
 Funcion atime<-time(array,L,k)
 	Definir i,atime como entero;
 	atime=0;

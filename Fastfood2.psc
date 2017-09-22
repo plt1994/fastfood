@@ -60,6 +60,9 @@ Funcion vender(orden,cliente,k)
 	mensaje[2]="¿Quiere tomate? 1)si 0)no";
 	mensaje[3]="¿Quiere queso? 1)si 0)no";
 	mensaje[4]="¿Quiere carne, pollo o lomo? 1)carne 2)pollo 3)lomo 0)nada";
+	mensaje[5]="Ingrese precio unitario";
+	mensaje[6]="Ingrese cantidad de hamburguesas";//////////////////////////////////
+	///////////////////////////////////////////////////////////
 	mensaje[5]="Que medio de pago usa: 1)tarjeta 2)redcompra 3)efectivo 0)cancelar pedido";
 	mensaje[6]="Ingrese efectivo";
 	tiempo[0]=2;
@@ -108,13 +111,10 @@ Funcion vender(orden,cliente,k)
 		FinSi
 		
 	FinPara
-	si orden[5,0]!=0 Entonces
+	si orden[5,0,k]!=0 Entonces
 		Escribir "Nombre cliente";
 		leer nombre;
 		cliente[k]=nombre;
-		para i<-0 hasta 6 con paso 1 Hacer
-			orden[i,2]=k;
-		FinPara
 	FinSi	
 FinFuncion
 Funcion escribirTablaNx2xM(array,N,M)

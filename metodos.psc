@@ -1,23 +1,7 @@
 Proceso metodos
 	
 FinProceso
-//array: arreglo de orden
-//L: largo del array
-//k: numero de cliente
-//retorna string con informacion de ingredientes
-Funcion string<-ingredientes(array,L,k)
-	Definir i como entero;
-	Definir string como caracter;
-	para i<- 0 hasta L-1 con paso 1 hacer
-		si i=0 entonces
-			string=array[i];
-		sino 
-			si array[i]!="null" Entonces
-				string=string+","+array[i,0,k];
-			FinSi
-		FinSi
-	FinPara	
-FinFuncion
+
 //array: arreglo de orden
 //L: largo del array
 //k: numero de cliente
@@ -68,5 +52,40 @@ Funcion display(array,cliente,La,Lc)
 	Hasta Que t=tmax 
 	
 FinFuncion
+//array: arreglo de orden
+//k: numero de cliente
+//retorna string con informacion de ingredientes
+Funcion string<-ingredientes(array,k)
+	Definir i como entero;
+	Dimension aux[7];
+	Definir string, aux como caracter;
+	aux[0]="Mayonesa";
+	aux[1]="Lechuga";
+	aux[2]="Tomate";
+	aux[3]="Queso";
+	aux[4]="Carne";
+	aux[5]="Pollo";
+	aux[6]="Lomo";
+	para i<- 0 hasta 4 con paso 1 hacer
+		si i<4 Entonces
+			si array[i,0,k]=1 Entonces
+				si string="" Entonces
+					string=aux[i];
+				SiNo
+					string=string+", "+aux[i];
+				FinSi
+			FinSi
+		sino
+			segun array[i] hacer
+				1:string=string+", "+aux[i];
+				2:string=string+", "+aux[i+1];
+				3:string=string+", "+aux[i+2];
+			FinSegun
+		FinSi
+	FinPara
+FinFuncion
+
+
+
 
 

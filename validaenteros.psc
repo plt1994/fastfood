@@ -34,3 +34,11 @@ Funcion bool<-validarEntero(num)
 		FinSi
 	FinPara
 FinFuncion
+//resetea valores de un pedido cancelado
+Funcion resetear(array,k)
+	Definir i Como Entero;
+	para i<-0 hasta 8 Con Paso 1 Hacer
+		array[i,0,k]=0;
+		array[i,1,k]=0;
+	FinPara
+FinFuncion
